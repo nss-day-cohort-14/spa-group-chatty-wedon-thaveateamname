@@ -1,3 +1,7 @@
+var Chatty = (function(oldIife) {
+
+var messageArray = [];
+
 var messageRequest = new XMLHttpRequest();
 
 messageRequest.open("GET", "initialMessage.json");
@@ -17,23 +21,26 @@ function xhrTransferError() {
 }
 
 function parseData() {
-  var messageData = JSON.parse(this.responseText);
-  for (currentMessage in messageData.messages) {
-    var messageCard = "";
-    var originalMessage = messageData.messages[currentMessage];
-
-    counter++;
-    messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}">Delete</button></div>`;
-
-    var newDiv = document.createElement("article");
-    newDiv.innerHTML = messageCard;
-    var newAttr = document.createAttribute("id");
-    newAttr.value = `cardWrapper--${counter}`;
-    newDiv.setAttributeNode(newAttr);
-    newMessages.appendChild(newDiv);
-
+  messageArray = JSON.parse(this.responseText);
   }
 
-}
 
+  // for (currentMessage in messageArray.messages) {
+  //   var messageCard = "";
+  //   var originalMessage = messageArray.messages[currentMessage];
 
+  //   counter++;
+  //   messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}">Delete</button></div>`;
+
+  //   var newDiv = document.createElement("article");
+  //   newDiv.innerHTML = messageCard;
+  //   var newAttr = document.createAttribute("id");
+  //   newAttr.value = `cardWrapper--${counter}`;
+  //   newDiv.setAttributeNode(newAttr);
+  //   newMessages.appendChild(newDiv);
+
+    // }
+  // }
+  return oldIife;
+
+}(Chatty || {}));
