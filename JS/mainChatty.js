@@ -25,7 +25,12 @@ function parseData() {
     counter++;
     messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}">Delete</button></div>`;
 
-
+    var newDiv = document.createElement("article");
+    newDiv.innerHTML = messageCard;
+    var newAttr = document.createAttribute("id");
+    newAttr.value = `cardWrapper--${counter}`;
+    newDiv.setAttributeNode(newAttr);
+    newMessages.appendChild(newDiv);
 
   }
 
