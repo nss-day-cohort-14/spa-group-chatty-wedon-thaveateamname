@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "1": "This is Chatty"
+    },
+    {
+      "2": "We are a new Chat application"
+    },
+    {
+      "3": "Chat with old friends"
+    },
+    {
+      "4": "Chat with new friends"
+    },
+    {
+      "5": "Chat with old people sitting at home doing nothing"
+    }
+  ]
+}
