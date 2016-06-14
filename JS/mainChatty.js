@@ -2,6 +2,10 @@ var Chatty = (function(oldIife) {
 
   var messageArray = [];
 
+  oldIife.addMessages = function(message) {
+    messageArray.push({message});
+  };
+
   var messageRequest = new XMLHttpRequest();
 
   messageRequest.open("GET", "initialMessage.json");
@@ -20,30 +24,25 @@ var Chatty = (function(oldIife) {
     return messageArray;
   };
 
-  oldIife.setMessages = function(message) {
-    messageArray.push(message);
-  };
+  function xhrTransferError() {
+    // console.log("error", An error occurred while transfering the data);
+  }
 
-function xhrTransferError() {
-  // console.log("error", An error occurred while transfering the data);
-}
+  function parseData() {
+    messageArray = JSON.parse(this.responseText).messages;
+    for (currentMessage in messageArray) {
+      var messageCard = "";
+      var originalMessage = messageArray[currentMessage];
 
-function parseData() {
-  messageArray = JSON.parse(this.responseText);
-  for (currentMessage in messageArray.messages) {
-    var messageCard = "";
-    var originalMessage = messageArray.messages[currentMessage];
+      counter++;
+      messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}" class="deleteButton">Delete</button></div>`;
 
-    counter++;
-    messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}">Delete</button></div>`;
-
-    var newDiv = document.createElement("article");
-    newDiv.innerHTML = messageCard;
-    var newAttr = document.createAttribute("id");
-    newAttr.value = `cardWrapper--${counter}`;
-    newDiv.setAttributeNode(newAttr);
-    newMessages.appendChild(newDiv);
-
+      var newDiv = document.createElement("article");
+      newDiv.innerHTML = messageCard;
+      var newAttr = document.createAttribute("id");
+      newAttr.value = `cardWrapper--${counter}`;
+      newDiv.setAttributeNode(newAttr);
+      newMessages.appendChild(newDiv);
     }
   }
 

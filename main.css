@@ -1,0 +1,51 @@
+.navBar {
+  background-color: lightyellow;
+}
+
+.mainHeader {
+  font-style: italic;
+  font-size: 2em;
+  color: blue;
+  display: inline;
+  margin: 0 5%;
+}
+
+.userInput {
+  width: 50%;
+  height: 2.5em;
+  margin-right: 5%;
+}
+
+.clearButton {
+  height: 2.5em;
+  margin-right: 13%;
+  border-radius: 10%;
+}
+
+.darkTheme {
+  margin: 1% 0 0 35%;
+}
+
+.messages {
+  text-align: left;
+  padding-left: 20%;
+  background-color: lightyellow;
+}
+
+.messageContainer {
+  border: 1px solid black;
+  width: 50%;
+  margin: 1% 0 0 20%;
+  height: 600px;
+  background-color: lightyellow;
+
+}
+
+.individualMessage {
+  margin: 1%;
+  font-size: 1.2em;
+}
+
+.deleteButton {
+  margin: 1%;
+}
