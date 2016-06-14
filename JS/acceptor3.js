@@ -10,7 +10,7 @@ var Chatty = (function(oldIife) {
 	//Button getter function -- splits off "--" to isolate button #//
 	function buttonGet() {
 		var delButton = event.target.id.split("--")[1];
-		var delTarget = event.target.closest(`#message--${delButton}`);
+		var delTarget = event.target.closest(`#cardWrapper--${delButton}`);
 		delTarget.remove();
 	}
 
