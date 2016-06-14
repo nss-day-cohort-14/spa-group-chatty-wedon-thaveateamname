@@ -1,9 +1,17 @@
-var removerButton = document.getElementById('clearButton');
+var Chatty = (function(oldIife) {
 
-removerButton.addEventListener('click', clearButton);
-var msgDel = document.getElementsByTagName('h1');
-
-function clearButton() {
+	//retrieves ID of container//
+	var messageContainer = document.getElementById("messageContainer");
 	
-	msgDel.remove();
-}
+	//Event calling function for new button ID//
+	messageContainer.addEventListener("click", buttonGet);
+
+	//Button getter function -- splits off "--" to isolate button #//
+	function buttonGet() {
+		var delButton = event.target.id.split("--")[1];
+		var delTarget = event.target.closest(`#cardWrapper--${delButton}`);
+		delTarget.remove();
+	}
+
+
+}(Chatty || {}));
