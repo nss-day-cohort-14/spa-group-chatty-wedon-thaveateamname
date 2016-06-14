@@ -1,5 +1,6 @@
 var Chatty = (function(oldIife) {
 
+	
 	//retrieves ID of container//
 	var messageContainer = document.getElementById("messageContainer");
 	
@@ -9,7 +10,7 @@ var Chatty = (function(oldIife) {
 	//Button getter function -- splits off "--" to isolate button #//
 	function buttonGet() {
 		var delButton = event.target.id.split("--")[1];
-		var delTarget = event.target.closest(`#cardWrapper--${delButton}`);
+		var delTarget = event.target.closest(`#message--${delButton}`);
 		delTarget.remove();
 	}
 
