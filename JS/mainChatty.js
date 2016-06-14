@@ -20,8 +20,8 @@ var Chatty = (function(oldIife) {
     return messageArray;
   };
 
-  oldIife.setMessages = function(message) {
-    messageArray.push(message);
+  oldIife.addMessages = function(message) {
+    messageArray.push({message});
   };
 
 function xhrTransferError() {
@@ -29,10 +29,10 @@ function xhrTransferError() {
 }
 
 function parseData() {
-  messageArray = JSON.parse(this.responseText);
-  for (currentMessage in messageArray.messages) {
+  messageArray = JSON.parse(this.responseText).messages;
+  for (currentMessage in messageArray) {
     var messageCard = "";
-    var originalMessage = messageArray.messages[currentMessage];
+    var originalMessage = messageArray[currentMessage];
 
     counter++;
     messageCard = `<div id="message--${counter}" class="individualMessage">${originalMessage.message}<button id="deleteMessage--${counter}">Delete</button></div>`;
