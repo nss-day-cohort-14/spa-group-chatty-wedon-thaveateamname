@@ -1,4 +1,4 @@
-var Chatty = (function(oldIife) {
+ var Chatty = (function(oldIife) {
 
   var messageArray = [];
 
@@ -24,10 +24,9 @@ var Chatty = (function(oldIife) {
     return messageArray;
   };
 
-  function xhrTransferError() {
-    // console.log("error", An error occurred while transfering the data);
-  }
-
+function xhrTransferError() {
+  // console.log("error", An error occurred while transfering the data);
+}
   function parseData() {
     messageArray = JSON.parse(this.responseText).messages;
     for (currentMessage in messageArray) {
