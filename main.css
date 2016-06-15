@@ -84,7 +84,7 @@ FIXED NAV
   display: inline;
   font-size: 15px;
   font-family: 'Audiowide', cursive;
-  color: #4d4d4d;
+  color: white;
   top: 45px;
   right: 540px;
 }
@@ -95,7 +95,7 @@ FIXED NAV
   display: inline;
   font-size: 15px;
   font-family: 'Audiowide', cursive;
-  color: #4d4d4d;
+  color: white;
   top: 45px;
   right: 360px;
 }
@@ -142,19 +142,10 @@ article {
   padding-top: 5px;
 }
 
-
-/******************
-DELETE ANIMATION
-******************/
-
-
-/************FOR DARK THEME*********/
 .dark {
-  background-color: black;
+  background-color: #151515;
   color: white;
  
-
-/************FOR LARGE TEXT*********/
-.large{
-  font-size: 2rem;
+.large {
+  font-size: 20px;
 }
