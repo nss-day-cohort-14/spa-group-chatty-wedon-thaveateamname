@@ -8,6 +8,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
+  background: #eaeaea;
 }
 
 
@@ -109,10 +110,13 @@ MESSAGE BOX
   width: 50%;
   top: 150px;
   margin: 0 auto;
-  height: 750px;
+  height: 700px;
   background-color: #eaeaea;
+  background: linear-gradient(to bottom, grey 20%, transparent 80%);
   border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   overflow: hidden;
+  box-shadow: inset -10px 10px 10px rgba(0, 0, 0, .4);
 }
 
 .individualMessage {
@@ -137,6 +141,11 @@ article {
   text-indent: 20px;
   padding-top: 5px;
 }
+
+
+/******************
+DELETE ANIMATION
+******************/
 
 
 /************FOR DARK THEME*********/
