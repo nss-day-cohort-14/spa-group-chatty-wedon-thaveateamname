@@ -145,7 +145,38 @@ article {
 .dark {
   background-color: #151515;
   color: white;
- 
+  animation-name: dark-mode;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-duration: .9s;
+}
+
+@keyframes dark-mode {
+  0%    {background-color: #eaeaea; color: black;}
+  100%  {background-color: #151515; color: white;}
+}
+
 .large {
   font-size: 20px;
+  animation-name: large-mode;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
 }
+
+@keyframes large-mode {
+  0%    {font-size: 15px;}
+  50%   {font-size: 22px;}
+  100%  {font-size: 20px;}
+} 
+
+
+
+
+
+
+
+
+
+
+
