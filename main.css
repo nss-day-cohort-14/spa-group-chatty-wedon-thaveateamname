@@ -1,44 +1,118 @@
-.navBar {
-  background-color: lightyellow;
+/******************
+GENERAL STYLES
+******************/
+
+body{
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.mainHeader {
-  font-style: italic;
-  font-size: 2em;
-  color: blue;
-  display: inline;
-  margin: 0 5%;
+
+/******************
+FIXED NAV
+******************/
+
+.navBar {
+  height: 135px;
+  width: 100%;
+  max-width: 100%;
+  background: #8c8c8c;
+  background: linear-gradient(to right, #8c8c8c 37%, transparent);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .2);
+  position: fixed;
+  z-index: 1000;
+
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  height: 80px;
+  width: 200px;
+  left: 100px;
+  top: 20px;
 }
 
 .userInput {
-  width: 50%;
-  height: 2.5em;
-  margin-right: 5%;
+  position: relative;
+  bottom: 10px;
+  left: 120px;
+  width: 54%;
+  max-width: 100%;
+  height: 35px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  outline: none;
+  font-size: 16px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+  font-family: 'Exo', sans-serif;
+  text-indent: 10px;
 }
 
 .clearButton {
-  height: 2.5em;
-  margin-right: 13%;
-  border-radius: 10%;
+  position: relative;
+  height: 41px;
+  left: 18px;
+  bottom: 12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+  outline: none;
+  background: #32a940;
 }
 
 .darkTheme {
-  margin: 1% 0 0 35%;
+  position: relative;
+  top: 30px;
+  right: 675px;
+
 }
 
-.messages {
-  text-align: left;
-  padding-left: 20%;
-  background-color: lightyellow;
+.largeText {
+  position: relative;
+  top: 30px;
+  right: 440px;
+
 }
+
+.dark-theme {
+  position: relative;
+  margin: 0;
+  display: inline;
+  font-size: 15px;
+  font-family: 'Audiowide', cursive;
+  color: #4d4d4d;
+  top: 45px;
+  right: 540px;
+}
+
+.large-text {
+  position: relative;
+  margin: 0;
+  display: inline;
+  font-size: 15px;
+  font-family: 'Audiowide', cursive;
+  color: #4d4d4d;
+  top: 45px;
+  right: 360px;
+}
+
+/******************
+MESSAGE BOX
+******************/
 
 .messageContainer {
+  position: relative;
   border: 1px solid black;
   width: 50%;
-  margin: 1% 0 0 20%;
-  height: 600px;
-  background-color: lightyellow;
-
+  top: 150px;
+  margin: 0 auto;
+  height: 750px;
+  background-color: #eaeaea;
+  border-top-right-radius: 30px;
+  overflow: hidden;
 }
 
 .individualMessage {
@@ -48,4 +122,30 @@
 
 .deleteButton {
   margin: 1%;
+}
+
+article {
+  background: #65b47a;
+  height: 40px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
+  font-family: 'Exo', sans-serif;
+}
+
+.individualMessage {
+  margin: 0;
+  margin-top: 7px;
+  text-indent: 20px;
+  padding-top: 5px;
+}
+
+
+/************FOR DARK THEME*********/
+.dark {
+  background-color: black;
+  color: white;
+ 
+
+/************FOR LARGE TEXT*********/
+.large{
+  font-size: 2rem;
 }
